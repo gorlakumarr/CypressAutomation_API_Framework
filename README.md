@@ -9,9 +9,9 @@ Cypress Automation framework for API's
    ex. Passing the response of one api to another api
    
 Sample API's used in this repo: 
-**https://flask-rest-api-demo.herokuapp.com/product/motorbike
+https://flask-rest-api-demo.herokuapp.com/product/motorbike
 https://flask-rest-api-demo.herokuapp.com/users
 https://reqres.in/api/users?page=2
 https://www.metaweather.com/api/location/search/?query=london
-https://gorest.co.in/**
+https://gorest.co.in/
  
