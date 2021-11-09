@@ -17,4 +17,4 @@ Sample API's used in this repo:
 3. https://reqres.in/api/users?page=2
 4. https://www.metaweather.com/api/location/search/?query=london
 5. https://gorest.co.in/
- 
+6. https://jsonplaceholder.typicode.com/
