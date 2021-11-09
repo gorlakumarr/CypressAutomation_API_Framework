@@ -1,37 +1,35 @@
 /// <reference types="Cypress" />
 
-describe('Get API for Rest', function () {
+describe('Api testing with Aliases', function () {
 
-    it('Get Api test for flask - motor bike', function () {
-        cy.log('Get Api test for flask - motor bike')
-        cy.request('https://flask-rest-api-demo.herokuapp.com/product/motorbike')
-            .then(function (response) {
-                expect(response.status).to.be.equal(200)
-                expect(response.body.product[0]).has.property('price', 599.99)
-                expect(response.body.product[0]).has.property('product', "motorbike")
-            })
+    beforeEach(() => {
+        cy.request('/users?page=2').as('usersGetApi')
     })
 
-    it('Get Api test for flask - Users', function () {
-        cy.log('Get Api test for flask - Users')
-        cy.request('https://flask-rest-api-demo.herokuapp.com/users')
-            .then(function (response) {
-                expect(response.status).to.be.equal(200)
-                expect(response.body.users[0]).has.property('username', "test_1")
-                expect(response.body.users[1]).has.property('id', 2)
-                expect(response.body.users).has.length(5)
-                expect(response.body.users[0]).not.have.property('price')
-            })
+    it('Validate the header info', function () {
+        cy.get('@usersGetApi')
+            .its('headers')
+            .its('content-type')
+            .should('include', 'application/json; charset=utf-8')
     })
 
-    it('Get Api test for flask - Users using params', function () {
-        cy.log('Get Api test for flask - Users using params')
-        cy.request('https://reqres.in/api/users?page=2')
-            .then(function (response) {
-                expect(response.status).to.be.equal(200)
-                expect(response.body).has.property('page', 2)
-                expect(response.body.data).has.length(6)
-                expect(response.body.data[0]).has.property('id', 7)
+    it('Validate the status code', function () {
+        cy.get('@usersGetApi')
+            .its('status')
+            .should('equal', 200)
+    })
+
+    it('Validate the response body - Check total pages', function () {
+        cy.get('@usersGetApi')
+            .its('body')
+            .should('contain', { "total_pages": 2 })
+    })
+
+    it('Validate the response body - user info data json array', function () {
+        cy.get('@usersGetApi')
+            .its('body')
+            .then((response) => {
+                expect(response.data[0]).has.property('first_name', 'Michael')
             })
     })
 })
