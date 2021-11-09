@@ -6,6 +6,7 @@ Cypress Automation framework for API's
 3. PUT
 4. DELETE
 5. Chaining of 2 Call's 
+   
    ex. Passing the response of one api to another api
    
 Sample API's used in this repo: 
