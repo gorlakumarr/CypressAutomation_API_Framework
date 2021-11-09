@@ -11,7 +11,7 @@ Cypress Automation framework for API's
 
 **5. Chaining of 2 Call's** 
    
-   ex. Passing the response of one api to another api
+     ex. Passing the response of one api to another api
    
 **6. Mock the API using intercept function**
 
