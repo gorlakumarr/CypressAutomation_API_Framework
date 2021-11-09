@@ -18,3 +18,4 @@ Sample API's used in this repo:
 4. https://www.metaweather.com/api/location/search/?query=london
 5. https://gorest.co.in/
 6. https://jsonplaceholder.typicode.com/
+7. http://coop.apps.symfonycasts.com/
