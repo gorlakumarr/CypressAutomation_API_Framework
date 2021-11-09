@@ -1,5 +1,5 @@
 # CypressAutomation_API_Framework
-Cypress Automation framework for API's
+Cypress Automation framework for Rest API's
 
 **1. GET**
 
@@ -9,7 +9,7 @@ Cypress Automation framework for API's
 
 **4. DELETE**
 
-**5. Chaining of 2 Call's** 
+**5. Chaining of 2 API Call's** 
    
      ex. Passing the response of one api to another api
    
