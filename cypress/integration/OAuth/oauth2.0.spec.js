@@ -7,6 +7,7 @@ describe('OAuth feature test', function () {
     let userId = ''
 
     before('Generate Token and User Id', () => {
+        cy.log('Generate Token and User Id')
         cy.request({
             method: 'POST',
             url: baseUrl + '/token',
