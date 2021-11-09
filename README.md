@@ -10,6 +10,7 @@ Cypress Automation framework for API's
    ex. Passing the response of one api to another api
    
 6. Mock the API using intercept function
+7. OAuth 2.0 API
    
 Sample API's used in this repo: 
 1. https://flask-rest-api-demo.herokuapp.com/product/motorbike
