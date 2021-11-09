@@ -9,10 +9,12 @@ Cypress Automation framework for API's
    
    ex. Passing the response of one api to another api
    
+6. Mock the API using intercept function
+   
 Sample API's used in this repo: 
 1. https://flask-rest-api-demo.herokuapp.com/product/motorbike
 2. https://flask-rest-api-demo.herokuapp.com/users
 3. https://reqres.in/api/users?page=2
 4. https://www.metaweather.com/api/location/search/?query=london
 5. https://gorest.co.in/
- 
+6. https://jsonplaceholder.typicode.com/
